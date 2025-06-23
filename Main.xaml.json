@@ -1,0 +1,45 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_orgName",
+      "DisplayName": "in_orgName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "uipathpublicsector",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_startTime",
+      "DisplayName": "in_startTime",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "2025-06-16T18:01:16Z",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_endTime",
+      "DisplayName": "in_endTime",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "2025-06-23T18:01:16Z",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

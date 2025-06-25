@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_orgName="tam_abbett" this:Main.in_startTime="[new DateTime(2025, 5, 20, 0, 0, 0)]" this:Main.in_endTime="[new DateTime(2025, 6, 20, 0, 0, 0)]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_orgName" Type="InArgument(x:String)">
       <x:Property.Attributes>
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="619.2,1790.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="875.2,2176" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="clientID" />
       <Variable x:TypeArguments="x:String" Default="g)t0ZAVh!fck?^t6" Name="clientSecret" />
@@ -116,19 +116,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="449.6,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Create confidential external app with Resource = Platform Management API Access and Scope =  PM.Audit application scope" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="449.6,145.6" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Create orchestrator assets for App ID and App Secret from external app &amp; environment eg. https://staging.uipath.com or https://cloud.uipath.com" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="AppID - Platform Management" CacheStrategy="None" DisplayName="Get Asset - AppID" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="449.6,204.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="545.6,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Create confidential external app with Resource = Platform Management API Access and Scope =  PM.Audit application scope" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="545.6,145.6" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Create orchestrator assets for App ID and App Secret from external app &amp; environment eg. https://staging.uipath.com or https://cloud.uipath.com" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="AppID - Platform Management" CacheStrategy="None" DisplayName="Get Asset - AppID" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="545.6,204.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[clientID]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="AppSecret - Platform Management" CacheStrategy="Execution" DisplayName="Get Asset - AppSecret" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="449.6,204.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="AppSecret - Platform Management" CacheStrategy="Execution" DisplayName="Get Asset - AppSecret" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="545.6,204.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[clientSecret]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="https://cloud.uipath.com or https://govcloud.uipath.us" AssetName="EnvironmentURL" CacheStrategy="None" DisplayName="Get Asset - EnvironmentURL" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="449.6,236" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="https://cloud.uipath.com or https://govcloud.uipath.us" AssetName="EnvironmentURL" CacheStrategy="None" DisplayName="Get Asset - EnvironmentURL" FolderPath="Human Resources" sap:VirtualizedContainerService.HintSize="545.6,236" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[environmentURL]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -138,15 +138,41 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <If Condition="[Not String.IsNullOrEmpty(clientID) AndAlso Not String.IsNullOrEmpty(clientSecret) AndAlso Not String.IsNullOrEmpty(environmentURL)]" sap:VirtualizedContainerService.HintSize="449.6,849.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not String.IsNullOrEmpty(clientID) AndAlso Not String.IsNullOrEmpty(clientSecret) AndAlso Not String.IsNullOrEmpty(environmentURL)]" sap:VirtualizedContainerService.HintSize="545.6,1235.2" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,462.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,848" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="isoStartTime" />
+            <Variable x:TypeArguments="x:String" Name="isoEndTime" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authenticate - Invoke Workflow File (Authenticate.xaml)" sap:VirtualizedContainerService.HintSize="382.4,205.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Authenticate.xaml">
+          <ui:MultipleAssign DisplayName="Multiple Assign- format time" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[isoStartTime]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[in_startTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[isoEndTime]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[in_endTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authenticate - Invoke Workflow File (Authenticate.xaml)" sap:VirtualizedContainerService.HintSize="478.4,205.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Authenticate.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_environmentURL">[environmentURL]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_clientSecret">[clientSecret]</InArgument>
@@ -154,13 +180,22 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_accessToken">[accessToken]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetAuditLogsOrg - Invoke Workflow File (GetAuditLogsOrg.xaml)" sap:VirtualizedContainerService.HintSize="382.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GetAuditLogsOrg.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MetadataAPI - Invoke Workflow File (MetadataAPI.xaml)" sap:VirtualizedContainerService.HintSize="478.4,205.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="MetadataAPI.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_accessToken">[accessToken]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_startTime">[isoStartTime]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_endTime">[isoEndTime]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_org">[in_orgName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_environmentURL">[environmentURL]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetAuditLogsOrg - Invoke Workflow File (GetAuditLogsOrg.xaml)" sap:VirtualizedContainerService.HintSize="478.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GetAuditLogsOrg.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_environmentURL">[environmentURL]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_accessToken">[accessToken]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_org">[in_orgName]</InArgument>
-              <InArgument x:TypeArguments="s:DateTime" x:Key="in_startTime">[in_startTime]</InArgument>
-              <InArgument x:TypeArguments="s:DateTime" x:Key="in_endTime">[in_endTime]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_startTime">[isoStartTime]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_endTime">[isoEndTime]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
